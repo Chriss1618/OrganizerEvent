@@ -23,32 +23,6 @@
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_blank" />
     </LinearLayout>
-    <android.widget.Button
-        android:id="@+id/button_open"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_button_main"
 
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:text="Open Event"
-        android:textColor="@color/LightMainColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_create" />
-    <android.widget.Button
-        android:id="@+id/button_create"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
 
-        android:text="Create Event"
-        android:background="@drawable/background_button_main"
-        android:textColor="@color/LightMainColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

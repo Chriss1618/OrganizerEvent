@@ -18,7 +18,9 @@ public class MenuViewFactory implements IViewFactory {
 
     private static final Map<Integer, Class<? extends IViewLayout>> classMap = new HashMap<>();
     static {
-        classMap.put(ControlMapper.IndexViewMapper.INDEX_MENU_LIST_EVENTI,  ListEventi_Fragment.class);
+        classMap.put(ControlMapper.IndexViewMapper.INDEX_MENU_LIST_EVENTI,      ListEventi_Fragment.class);
+        classMap.put(ControlMapper.IndexViewMapper.INDEX_MENU_CREATE_EVENTO,    CreateEvent_Fragment.class);
+        classMap.put(ControlMapper.IndexViewMapper.INDEX_MENU_JOIN_EVENTO,      JoinEvent_Fragment.class);
     }
 
     @Override

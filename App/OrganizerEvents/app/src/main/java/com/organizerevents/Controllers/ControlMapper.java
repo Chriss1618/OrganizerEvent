@@ -15,7 +15,11 @@ public class ControlMapper {
         public static final int INDEX_TYPE_CONTROLLER_AMMINISTRATORE    = 1;
         public static final int INDEX_TYPE_CONTROLLER_MEMBRO            = 2;
     }
-
+    public static class IndexControllerMapper {
+        //Index
+        public final static int INDEX_TYPE_CONTROLLER_MENU             = 0;
+        public final static int INDEX_TYPE_CONTROLLER_EVENTO             = 1;
+    }
     public static class IndexManagerMapper {
         //Index
         public final static int INDEX_TYPE_MANAGER_MENU             = 0;
@@ -57,7 +61,16 @@ public class ControlMapper {
 
     public static class ListIndexUserTabMapper{
         //PAGINATION
-        static Integer [] ADMINISTRATOR_INDEX = {
+        static Integer [] HOME_INDEX = {
+                IndexManagerMapper.INDEX_TYPE_MANAGER_MENU
+        };
+        static Integer [] EVENTO_INDEX = {
+                IndexManagerMapper.INDEX_TYPE_MANAGER_MENU,
+                IndexManagerMapper.INDEX_TYPE_MANAGER_INFO,
+                IndexManagerMapper.INDEX_TYPE_MANAGER_PASSAGGI,
+                IndexManagerMapper.INDEX_TYPE_MANAGER_SONDAGGI,
+                IndexManagerMapper.INDEX_TYPE_MANAGER_SPESE,
+                IndexManagerMapper.INDEX_TYPE_MANAGER_REGALO
         };
     }
 
@@ -98,7 +111,8 @@ public class ControlMapper {
 
     public static final Map<Integer, Integer[]> classControllerToManager = new HashMap<>();
     static {
-        //classControllerToManager.put(TypeUserMapper.INDEX_TYPE_CONTROLLER_AMMINISTRATORE,  ListIndexUserTabMapper.ADMINISTRATOR_INDEX);
+        classControllerToManager.put(IndexControllerMapper.INDEX_TYPE_CONTROLLER_MENU,  ListIndexUserTabMapper.HOME_INDEX);
+        classControllerToManager.put(IndexControllerMapper.INDEX_TYPE_CONTROLLER_EVENTO,  ListIndexUserTabMapper.EVENTO_INDEX);
     }
 
     public static final Map<Integer, Integer[]> classManagerToView = new HashMap<>();

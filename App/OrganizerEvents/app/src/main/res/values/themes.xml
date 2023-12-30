@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.OrganizerEvents" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/SecondMainColor</item>
+        <item name="colorPrimary">@color/SecondMainColor</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Theme.OrganizerEvents" parent="Base.Theme.OrganizerEvents" />

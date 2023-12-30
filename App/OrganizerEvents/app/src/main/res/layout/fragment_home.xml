@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Schermate.Home.ListEventi_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <android.widget.Button
+            android:id="@+id/button_create"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+
+
+            android:fontFamily="@font/nunito_regular"
+            android:text="Create Event"
+            android:textSize="16sp"
+            android:textColor="@color/LightMainColor"
+
+            android:background="@drawable/background_button_main"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <android.widget.Button
+            android:id="@+id/button_join"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+
+            android:layout_marginTop="8dp"
+
+            android:fontFamily="@font/nunito_regular"
+            android:text="Join Event"
+            android:textSize="16sp"
+            android:textColor="@color/LightMainColor"
+
+            android:background="@drawable/background_button_main"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_create" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

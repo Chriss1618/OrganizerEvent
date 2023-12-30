@@ -65,9 +65,12 @@ public class Manager implements ISubController {
         addViews();
     }
     private void addViews(){
-        for (int indexView : LIST_INDEX_VIEW)
+        for (int indexView : LIST_INDEX_VIEW){
+            Log.d(TAG, "addViews: index View: " + indexView);
             try{ ViewsFragments.add( new ViewFactory().createView(sourceInfo.getIndex_TypeManager(),indexView,this)); }
             catch (IllegalAccessException | InstantiationException e) { Log.e(TAG, "Manager_MenuFragments: ", e); }
+        }
+
     }
 
     public SourceInfo getSourceInfo() {
@@ -112,7 +115,7 @@ public class Manager implements ISubController {
     @Override
     public void closeView() {
         ViewsFragments.get( getPositionOfView(IndexFrom) ).EndAnimations();
-        Try.run(() -> TimeUnit.MILLISECONDS.sleep(300));
+        //Try.run(() -> TimeUnit.MILLISECONDS.sleep(300));
     }
 
     @Override
@@ -126,7 +129,8 @@ public class Manager implements ISubController {
             getSourceInfo().setIndex_TypeView(IndexOnMain);
         }
 
-        new Handler(Looper.getMainLooper()).postDelayed( fragmentManager::popBackStack,300);
+        //new Handler(Looper.getMainLooper()).postDelayed( fragmentManager::popBackStack,300);
+        new Handler(Looper.getMainLooper()).postDelayed( fragmentManager::popBackStack,0);
     }
 
     @Override

@@ -42,8 +42,11 @@ public class Controller implements IController {
 
         LIST_INDEX_MANAGERS = ControlMapper.classControllerToManager.get(typeController);
 
+        Log.d(TAG, "Controller: Arrivato ");
+        Log.d(TAG, "Index typeController: " + typeController);
         assert LIST_INDEX_MANAGERS != null;
         for (int indexManager : LIST_INDEX_MANAGERS ) {
+            Log.d(TAG, "Index Manager: " + indexManager);
             Managers.add(new Manager(
                             new SourceInfo(indexManager,typeController),
                             context,
